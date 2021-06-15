@@ -1,7 +1,12 @@
 # react-movie-app
 hello react! (첫 리액트 프로젝트)
 
-React JS Fundamentals Course
+React JS Fundamentals Course  
+
+---
+
+## How does browser work?
+![browser Work Tree](./readmeAsset/browser-workflow.png)
 
 ## How does React work?
 > **nodemodule, public, src**  
