@@ -19,6 +19,7 @@ class App extends React.Component {
       'https://yts.mx/api/v2/list_movies.json?sort_by=rating'
     );
     this.setState({ movies, isLoading: false });
+    console.log({ movies });
   };
 
   componentDidMount() {
@@ -44,6 +45,7 @@ class App extends React.Component {
                 summary={movie.summary}
                 poster={movie.medium_cover_image}
                 genres={movie.genres}
+                rating={movie.rating}
               />
             ))}
           </div>
