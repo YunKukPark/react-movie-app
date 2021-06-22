@@ -210,4 +210,13 @@ body,
     background-color: #fff;
     border-radius: 45px;
   }
+
+  .movie-head {
+    margin-bottom: 50px;
+  }
+
+  .movie-head .movie-title,
+  .movie-basic-info {
+    margin-bottom: 20px;
+  }
 }
