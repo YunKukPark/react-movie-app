@@ -22,26 +22,28 @@ function Movie({ year, title, summary, poster, genres, rating, runtime }) {
         </div>
       </div>
 
-      <div className="movie-head">
-        <h1 className="movie-title">{title}</h1>
-        <ul className="movie-basic-info">
-          <li className="movie-year">{year}</li>
-          <li className="movie-runtime">{runtime}min</li>
-        </ul>
-        <ul className="genre-list">
-          {genres.map(
-            (genre, index) =>
-              index < 3 && (
-                <li key={index} className="genre-item">
-                  {genre}
-                </li>
-              )
-          )}
-        </ul>
-      </div>
-      <div className="movie-desc-wrap">
-        <h4 className="movie-desc-title">Plot Summary</h4>
-        <p className="movie-summary">{summary}</p>
+      <div className="movie-info-detail">
+        <div className="movie-head">
+          <h1 className="movie-title">{title}</h1>
+          <ul className="movie-basic-info">
+            <li className="movie-year">{year}</li>
+            <li className="movie-runtime">{runtime}min</li>
+          </ul>
+          <ul className="genre-list">
+            {genres.map(
+              (genre, index) =>
+                index < 3 && (
+                  <li key={index} className="genre-item">
+                    {genre}
+                  </li>
+                )
+            )}
+          </ul>
+        </div>
+        <div className="movie-desc-wrap">
+          <h4 className="movie-desc-title">Plot Summary</h4>
+          <p className="movie-summary">{summary}</p>
+        </div>
       </div>
     </div>
   );

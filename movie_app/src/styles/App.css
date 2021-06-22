@@ -153,3 +153,61 @@ body,
   line-height: 1.5;
   color: #737599;
 }
+
+@media screen and (min-width: 768px) {
+  .movies {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+
+  .movie {
+    width: 40%;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .container {
+    padding: 80px 0;
+  }
+  .movie {
+    display: flex;
+    width: 45%;
+    margin-bottom: 80px;
+  }
+  .movie-thumnail {
+    position: relative;
+    width: 300px;
+    height: 450px;
+    margin-bottom: 0;
+    border-radius: 20px;
+  }
+
+  .movie-thumnail .movie-poster-wrap {
+    width: 300px;
+    height: 450px;
+    overflow: hidden;
+    border-radius: 0;
+  }
+  .movie-thumnail img {
+    display: block;
+    width: 100%;
+    object-fit: cover;
+    transform: unset;
+    border-radius: 20px;
+  }
+
+  .movie-rate-wrap {
+    position: absolute;
+    width: 90px;
+    height: 90px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    right: 10px;
+    bottom: 57px;
+    transform: translateY(50%);
+    background-color: #fff;
+    border-radius: 45px;
+  }
+}
