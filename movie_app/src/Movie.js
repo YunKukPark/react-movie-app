@@ -42,7 +42,9 @@ function Movie({ year, title, summary, poster, genres, rating, runtime }) {
         </div>
         <div className="movie-desc-wrap">
           <h4 className="movie-desc-title">Plot Summary</h4>
-          <p className="movie-summary">{summary}</p>
+          <p className="movie-summary">
+            {summary.length < 300 ? summary : `${summary.slice(0, 300)}...`}
+          </p>
         </div>
       </div>
     </div>
