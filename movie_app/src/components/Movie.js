@@ -1,12 +1,25 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import './styles/Movie.css';
 import '../styles/fonts.css';
 
-function Movie({ year, title, summary, poster, genres, rating, runtime }) {
+function Movie({ id, year, title, summary, poster, genres, rating, runtime }) {
   return (
     <div className="movie">
-      <div className="movie-thumnail">
+      <Link
+        className="movie-thumnail"
+        to={{
+          pathname: `/movie/${id}`,
+          state: {
+            year,
+            title,
+            summary,
+            poster,
+            genres,
+          },
+        }}
+      >
         <div className="movie-poster-wrap">
           <img src={poster} alt={title} />
         </div>
@@ -20,7 +33,7 @@ function Movie({ year, title, summary, poster, genres, rating, runtime }) {
             </strong>
           </div>
         </div>
-      </div>
+      </Link>
 
       <div className="movie-info-detail">
         <div className="movie-head">
